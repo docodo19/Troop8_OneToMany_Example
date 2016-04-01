@@ -1,0 +1,43 @@
+﻿<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <h1>{{controller.blog.title}}</h1>
+    </div>
+
+    <div class="col-md-6 col-md-offset-3">
+        <h3>{{controller.blog.message}}</h3>
+    </div>
+</div>
+<hr />
+
+
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <form ng-submit="controller.saveComment()">
+            <div class="form-group">
+                <input type="text" class="form-control" ng-model="controller.comment.message" />
+            </div>
+
+            <div class="form-group">
+                <input type="submit" class="btn btn-primary btn-block" value="Add comment" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <table class="table">
+            <tr>
+                <th>Id</th>
+                <th>Comments</th>
+            </tr>
+            <tr ng-repeat="comment in controller.blog.comments">
+                <td>{{comment.id}}</td>
+                <td>{{comment.message}}</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+

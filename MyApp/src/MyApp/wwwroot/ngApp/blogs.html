@@ -1,0 +1,21 @@
+﻿<div class="row">
+    <div class="col-md-6 col-md-offset-3 text-center">
+        <h1>List of blogs</h1>
+    </div>
+
+    <div class="col-md-6 col-md-offset-3 text-center">
+        <h5><a href="/createBlog">Create</a></h5>
+    </div>
+    <hr />
+</div>
+
+<div class="row" ng-repeat="blog in controller.blogs">
+    <div class="col-md-12 col-md-offset-3">
+        <h3>
+            <a href="/blogs/{{blog.id}}">
+                {{blog.title}}
+            </a>
+        </h3>
+    </div>
+</div>
+
